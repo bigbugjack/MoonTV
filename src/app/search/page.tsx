@@ -249,6 +249,17 @@ function SearchPageClient() {
                   placeholder='搜索电影、电视剧...'
                   className='w-full h-12 rounded-lg bg-gray-50/80 py-3 pl-10 pr-4 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400 focus:bg-white border border-gray-200/50 shadow-sm dark:bg-gray-800 dark:text-gray-300 dark:placeholder-gray-500 dark:focus:bg-gray-700 dark:border-gray-700'
                 />
+                {/* 清空按钮 */}
+                {searchQuery && (
+                  <button
+                    type='button'
+                    aria-label='清空搜索'
+                    onClick={() => setSearchQuery('')}
+                    className='absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300'
+                  >
+                    <X className='w-4 h-4' />
+                  </button>
+                )}
               </div>
               <button
                 type='submit'
